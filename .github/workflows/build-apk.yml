@@ -22,11 +22,11 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.22.2' # Using a specific stable version prevents timeout errors
+          flutter-version: '3.22.2'
           cache: true
 
       - name: Install Dependencies
-        run: flutter pub get
+        run: flutter pub get -v
 
       - name: Build Android APK
         run: flutter build apk --release
